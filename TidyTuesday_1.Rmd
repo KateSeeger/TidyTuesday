@@ -36,12 +36,9 @@ driver_results_df <- driver_standings %>%
   rename(driver_url = url) %>% 
   left_join(drivers, by = "driverId")
  
-
 ```
 
 ```{r}
-
-png("tidytues1.png")
 
 driver_results_df %>%
   filter(wins > 0) %>%
@@ -58,6 +55,7 @@ driver_results_df %>%
        y= "", 
        color = "Nationality") 
 
-dev.off()
+
 ```
 
+> I chose to do this comparison graphs because Germany and Britain by far had the most formula 1 wins over the past 5 decades. Their win count went into the thousands; whereas, most other countries only had a few hundred. I felt that this step graph was appropriate because each year there was a definite number of wins. This color scheme across a grey background helped the colors stand out and I kept in the legend, but not the axes labels because they were redundant.
